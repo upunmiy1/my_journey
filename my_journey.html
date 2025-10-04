@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ✍️ EDIT: Change this to your name and a short description -->
+    <title>My American Journey | Uday Punmiya</title>
+    <meta name="description" content="Follow my personal journey to the USA and the milestones I've achieved along the way.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for a clean look and animations */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* light gray background */
+            color: #1e293b; /* slate-800 */
+        }
+
+        /* Simple fade-in animation for elements as they scroll into view */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Style for the timeline line */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background-color: #cbd5e1; /* slate-300 */
+        }
+
+        /* Styles for Modal */
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- ✍️ EDIT: Your Name -->
+                <div class="text-xl font-bold text-slate-800">Uday Punmiya</div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#journey" class="text-slate-600 hover:text-blue-600 transition-colors">My Journey</a>
+                    <a href="#achievements" class="text-slate-600 hover:text-blue-600 transition-colors">Achievements</a>
+                    <a href="#services" class="text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#skills" class="text-slate-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#journey" class="block py-2 text-slate-600 hover:text-blue-600">My Journey</a>
+            <a href="#achievements" class="block py-2 text-slate-600 hover:text-blue-600">Achievements</a>
+            <a href="#services" class="block py-2 text-slate-600 hover:text-blue-600">Services</a>
+            <a href="#skills" class="block py-2 text-slate-600 hover:text-blue-600">Skills</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-24 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <!-- ✍️ EDIT: Add a photo of yourself. A friendly, professional headshot works best! -->
+                    <img src="https://placehold.co/150x150/e2e8f0/475569?text=Your+Photo" alt="A portrait of Uday Punmiya" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-8 shadow-lg">
+                    
+                    <!-- ✍️ EDIT: Create a powerful headline. This is the first thing people read. -->
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-800 mb-4 leading-tight">From India to New Horizons</h1>
+                    
+                    <!-- ✍️ EDIT: Write a short, engaging summary of your story (2-3 sentences). -->
+                    <p class="text-lg md:text-xl text-slate-600 mb-8">
+                        Welcome to my corner of the web! This is the story of my journey to the United States—a tale of challenges, growth, and the pursuit of the American Dream.
+                    </p>
+                    
+                    <a href="#journey" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-transform hover:scale-105 inline-block">
+                        Follow My Journey
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Journey (Timeline Section) -->
+        <section id="journey" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">A Timeline of My Path</h2>
+                    <p class="text-lg text-slate-500 mt-2">Key moments that shaped my story.</p>
+                </div>
+
+                <div class="relative max-w-2xl mx-auto timeline-line">
+                    
+                    <!-- ✍️ EDIT: This is the most important part. Add 4-6 key events from your journey. -->
+                    <!-- I've created 4 placeholders for you. You can copy and paste to add more! -->
+
+                    <!-- Timeline Item 1 -->
+                    <div class="fade-in mb-12 flex items-center w-full">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center ring-8 ring-white">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                                <p class="text-sm font-medium text-blue-600">Month, Year</p>
+                                <h3 class="font-bold text-xl mb-2 text-slate-800">The Big Move: Arriving in the USA</h3>
+                                <p class="text-slate-600">Describe your arrival. What were your first impressions? The feelings of excitement, nervousness, and hope. What city did you arrive in?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="fade-in mb-12 flex items-center w-full flex-row-reverse">
+                        <div class="hidden md:block w-1/2 pr-8 text-right">
+                           <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                                <p class="text-sm font-medium text-blue-600">Month, Year</p>
+                                <h3 class="font-bold text-xl mb-2 text-slate-800">First Steps & Early Challenges</h3>
+                                <p class="text-slate-600">Talk about an early challenge you overcame. This could be learning English, finding your first job, or adapting to a new culture. It makes your story relatable.</p>
+                            </div>
+                        </div>
+                        <div class="z-10">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center ring-8 ring-white">
+                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2"></div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="fade-in mb-12 flex items-center w-full">
+                         <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center ring-8 ring-white">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-9.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-9.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                                <p class="text-sm font-medium text-blue-600">Month, Year</p>
+                                <h3 class="font-bold text-xl mb-2 text-slate-800">Educational or Career Milestone</h3>
+                                <p class="text-slate-600">Did you graduate from a university? Get an important certification? Land a job that was a big step up? Share that accomplishment here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ✨ NEW: Timeline Item for Google -->
+                    <div class="fade-in mb-12 flex items-center w-full flex-row-reverse">
+                        <div class="hidden md:block w-1/2 pr-8 text-right">
+                           <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                                <p class="text-sm font-medium text-blue-600">Month, Year</p>
+                                <h3 class="font-bold text-xl mb-2 text-slate-800">Joining a Tech Giant: My Role at Google</h3>
+                                <p class="text-slate-600">Describe the moment you landed a role at Google. This is a massive achievement and a testament to your skills and perseverance. Mention your role or what you were excited to work on.</p>
+                            </div>
+                        </div>
+                        <div class="z-10">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center ring-8 ring-white">
+                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2"></div>
+                    </div>
+
+                    <!-- ✨ NEW: Timeline Item for EB2-NIW -->
+                    <div class="fade-in mb-12 flex items-center w-full">
+                         <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center ring-8 ring-white">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                                <p class="text-sm font-medium text-blue-600">Month, Year</p>
+                                <h3 class="font-bold text-xl mb-2 text-slate-800">EB-2 NIW Visa Approval</h3>
+                                <p class="text-slate-600">A landmark achievement: my EB-2 National Interest Waiver petition was approved, recognizing my work as being in the national interest of the United States. This was a pivotal moment in securing my future here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Timeline Item 4 -->
+                    <div class="fade-in mb-12 flex items-center w-full flex-row-reverse">
+                        <div class="hidden md:block w-1/2 pr-8 text-right">
+                           <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                                <p class="text-sm font-medium text-blue-600">Month, Year - Present</p>
+                                <h3 class="font-bold text-xl mb-2 text-slate-800">Where I Am Today</h3>
+                                <p class="text-slate-600">Bring your story to the present. What are you doing now? What are you proud of? You can also mention what you're looking forward to in the future.</p>
+                            </div>
+                        </div>
+                        <div class="z-10">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center ring-8 ring-white">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">My Proudest Achievements</h2>
+                    <p class="text-lg text-slate-500 mt-2">Highlights from my personal and professional life.</p>
+                </div>
+                
+                <!-- ✍️ EDIT: Showcase 2-3 key achievements. These can be projects, awards, or personal goals you've met. -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- ✨ NEW: Achievement Card for EB-2 NIW -->
+                    <div class="fade-in bg-slate-50 rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-200">
+                        <div class="text-blue-600 mb-4">
+                           <!-- Icon -->
+                           <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H7a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">EB-2 NIW Recipient</h3>
+                        <p class="text-slate-600">Successfully petitioned for and was granted an EB-2 National Interest Waiver, a U.S. immigrant visa category for professionals whose work is of significant benefit to the nation.</p>
+                    </div>
+
+                    <!-- Achievement Card 1 -->
+                    <div class="fade-in bg-slate-50 rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-200">
+                        <div class="text-blue-600 mb-4">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Project or Award Name</h3>
+                        <p class="text-slate-600">Briefly describe the achievement. What was it? What did you do? Why are you proud of it? Keep it concise but impactful.</p>
+                    </div>
+
+                    <!-- Achievement Card 2 -->
+                    <div class="fade-in bg-slate-50 rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-200">
+                        <div class="text-blue-600 mb-4">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Community Involvement</h3>
+                        <p class="text-slate-600">Did you volunteer? Start a club? Help your community? Sharing how you give back is a powerful way to show your character.</p>
+                    </div>
+
+                    <!-- Achievement Card 3 -->
+                    <div class="fade-in bg-slate-50 rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-200">
+                        <div class="text-blue-600 mb-4">
+                            <!-- Icon -->
+                           <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">A Personal Goal Achieved</h3>
+                        <p class="text-slate-600">This could be anything from running a marathon to learning a new skill like coding or painting. It shows your dedication and personality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- ✨ NEW: Services Section -->
+        <section id="services" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">How I Can Help</h2>
+                    <p class="text-lg text-slate-500 mt-2">Leveraging my journey and skills to offer valuable services.</p>
+                </div>
+                
+                <!-- ✍️ EDIT: Define 2-3 services you can offer. Think about what skills people might admire from your story. -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Service Card 1 -->
+                    <div class="fade-in bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow border border-slate-200 text-center">
+                        <div class="text-blue-600 mb-4 inline-block">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Motivational Speaking</h3>
+                        <p class="text-slate-600 mb-6">Sharing my story of perseverance and adaptation to inspire teams and individuals at events or in corporate settings.</p>
+                        <!-- ✍️ EDIT: This is now a link. Replace "#" with your payment link from Stripe/PayPal. -->
+                        <a href="#" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors inline-block">
+                            Book Now
+                        </a>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="fade-in bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow border border-slate-200 text-center">
+                        <div class="text-blue-600 mb-4 inline-block">
+                            <!-- Icon -->
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h2m4-4h2a2 2 0 012 2v2H9V4a2 2 0 012-2h2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">One-on-One Mentoring</h3>
+                        <p class="text-slate-600 mb-6">Providing personalized guidance for individuals navigating career changes, cultural adaptation, or personal growth challenges.</p>
+                        <!-- ✍️ EDIT: This is now a link. Replace "#" with your payment link from Stripe/PayPal. -->
+                        <a href="#" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors inline-block">
+                            Book Now
+                        </a>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="fade-in bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow border border-slate-200 text-center">
+                        <div class="text-blue-600 mb-4 inline-block">
+                           <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86l-2.387-.477a2 2 0 00-1.806.547 2 2 0 00-.547 1.806zM15 9a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Cross-Cultural Workshops</h3>
+                        <p class="text-slate-600 mb-6">Designing and leading workshops for companies on effective communication and collaboration in diverse, multicultural teams.</p>
+                        <!-- ✍️ EDIT: This is now a link. Replace "#" with your payment link from Stripe/PayPal. -->
+                        <a href="#" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors inline-block">
+                           Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Skills I've Cultivated</h2>
+                    <p class="text-lg text-slate-500 mt-2">Abilities I've developed on my journey.</p>
+                </div>
+                
+                <!-- ✍️ EDIT: List your key skills. Mix professional and personal skills. -->
+                <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
+                    <span class="bg-blue-100 text-blue-800 text-lg font-medium px-6 py-2 rounded-full">Skill #1 (e.g., Software Development)</span>
+                    <span class="bg-slate-200 text-slate-800 text-lg font-medium px-6 py-2 rounded-full">Skill #2 (e.g., Bilingual: English & Your Language)</span>
+                    <span class="bg-blue-100 text-blue-800 text-lg font-medium px-6 py-2 rounded-full">Skill #3 (e.g., Project Management)</span>
+                    <span class="bg-slate-200 text-slate-800 text-lg font-medium px-6 py-2 rounded-full">Skill #4 (e.g., Public Speaking)</span>
+                    <span class="bg-slate-200 text-slate-800 text-lg font-medium px-6 py-2 rounded-full">Skill #5 (e.g., Data Analysis)</span>
+                    <span class="bg-blue-100 text-blue-800 text-lg font-medium px-6 py-2 rounded-full">Skill #6 (e.g., Adaptability)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-slate-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                    I'm always open to discussing new opportunities, sharing experiences, or just saying hello. Feel free to reach out.
+                </p>
+
+                <!-- ✍️ EDIT: Change this to your email address -->
+                <a href="mailto:your.email@example.com" class="bg-white text-slate-800 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-colors inline-block text-lg mb-10">
+                    your.email@example.com
+                </a>
+
+                <!-- ✍️ EDIT: Add links to your social media profiles. If you don't have one, you can remove the link. -->
+                <div class="flex justify-center space-x-6">
+                    <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                     <a href="#" target="_blank" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <!-- ✍️ EDIT: Your Name and the current year -->
+            <p>&copy; 2025 Uday Punmiya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ✨ NEW: Contact Modal -->
+    <div id="contact-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-container bg-white w-full max-w-lg rounded-lg shadow-2xl p-8 relative transform scale-95">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-slate-500 hover:text-slate-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-slate-800 mb-4">Get in Touch</h2>
+            <p class="text-slate-600 mb-6">Interested in my services? Please fill out the form below and I'll get back to you soon.</p>
+            <form action="#" method="POST">
+                <div class="mb-4">
+                    <label for="name" class="block text-slate-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-slate-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-slate-700 text-sm font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <div class="flex items-center justify-end">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Smooth Scrolling for anchor links ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // --- Fade-in animation on scroll ---
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.3, // Item is 30% visible
+            rootMargin: "0px 0px -50px 0px" // Start animating a little before it's fully in view
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // --- ✨ Modal Logic (No longer needed for payment buttons) ---
+        const contactModal = document.getElementById('contact-modal');
+        const modalOverlay = document.querySelector('.modal-overlay');
+        const modalContainer = document.querySelector('.modal-container');
+        // We are no longer using these buttons for the modal, but keeping the logic in case you want to use it elsewhere.
+        // const openModalButtons = document.querySelectorAll('.open-modal-button');
+        const closeModalButton = document.getElementById('close-modal-button');
+
+        const openModal = () => {
+            contactModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            setTimeout(() => {
+                modalOverlay.classList.add('opacity-100');
+                modalContainer.classList.remove('scale-95');
+            }, 10);
+        };
+
+        const closeModal = () => {
+            modalOverlay.classList.remove('opacity-100');
+            modalContainer.classList.add('scale-95');
+            setTimeout(() => {
+                contactModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300); // Match transition duration
+        };
+
+        // openModalButtons.forEach(button => {
+        //     button.addEventListener('click', openModal);
+        // });
+        
+        closeModalButton.addEventListener('click', closeModal);
+        
+        // Close modal if user clicks outside of the modal content
+        contactModal.addEventListener('click', (event) => {
+            if (event.target === contactModal) {
+                closeModal();
+            }
+        });
+
+        // Note: The form in the modal is for display. To make it functional,
+        // you would need a backend service or a service like Formspree.
+
+    </script>
+</body>
+</html>
